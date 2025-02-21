@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #d3d3d3;
+    color: #333;
+}
+
+nav {
+    background-color: #2b6cb0;
+    color: white;
+    padding: 2rem 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+nav a {
+    background-color: #38b2ac;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin-left: 1rem;
+}
+
+nav a:hover {
+    background-color: #319795;
+}
+
+.hero {
+    background: linear-gradient(135deg, #4299e1, #9f7aea);
+    color: white;
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 5rem;
+}
+
+.cta-button {
+    background-color: #38b2ac;
+    padding: 1.5rem 3rem;
+    border-radius: 5px;
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s ease-in-out, box-shadow 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+    background-color: #319795;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.survey-list {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.survey-list h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.survey-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.survey-card {
+    background-color: #f3f3f3;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.survey-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.survey-card h3 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.survey-card p {
+    color: #718096;
+    margin-bottom: 1.5rem;
+}
+
+.survey-card .actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.survey-card a {
+    background-color: #38b2ac;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    flex: 1;
+    text-align: center;
+    margin: 0 0.5rem;
+}
+
+.survey-card a:hover {
+    color: #319795;
+}
+
+footer {
+    background-color: #2d3748;
+    color: rgba(255, 255, 255, 0.75);
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+}
