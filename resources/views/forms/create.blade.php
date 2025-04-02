@@ -4,31 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Créer un Sondage</title>
-    <link href="../../../public/css/main.css" rel="stylesheet">
-    <link href="../../../public/css/create.css" rel="stylesheet">
+    <link href="{{ asset('/css/main.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/create.css') }}" rel="stylesheet">
 </head>
 <body>
 
 <nav>
     <div class="container">
         <div class="logo">Système de Sondage</div>
-        <a href="forms.blade.php">Retour</a>
+        <a href="{{ route('forms.index') }}">Retour</a>
     </div>
 </nav>
 
 <section class="create-survey">
     <h1>Créer un Nouveau Sondage</h1>
-    <form action="#" method="POST">
+    <form action="{{ route('forms.store') }}" method="POST" id="survey-form">
         @csrf
 
         <label for="title">Titre du sondage :</label>
         <input type="text" id="title" name="title" required>
 
+        <label for="description">Description :</label>
+        <textarea id="description" name="description" required></textarea>
+
         <div id="questions-container">
             <h2>Questions</h2>
             <div class="question">
                 <input type="text" name="questions[]" placeholder="Entrez une question" required>
-                <select name="type[]" class="question-type">
+                <select name="types[]" class="question-type">
                     <option value="text">Réponse libre</option>
                     <option value="multiple">Choix multiple</option>
                 </select>
@@ -57,7 +60,7 @@
         questionDiv.classList.add('question');
         questionDiv.innerHTML = `
             <input type="text" name="questions[]" placeholder="Entrez une question" required>
-            <select name="type[]" class="question-type">
+            <select name="types[]" class="question-type">
                 <option value="text">Réponse libre</option>
                 <option value="multiple">Choix multiple</option>
             </select>
@@ -103,6 +106,7 @@
             }
         }
     });
+
 </script>
 
 </body>
